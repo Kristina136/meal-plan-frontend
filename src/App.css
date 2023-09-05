@@ -1,0 +1,109 @@
+body {
+  background: url('https://images.unsplash.com/photo-1543353071-873f17a7a088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+  background-size: cover;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Gloria Hallelujah', cursive;
+
+  }
+  .App{
+    text-align: center;
+  }
+  h1 {
+background-color: rgba(89, 126, 126, 0.737);;
+  }
+  .deleteImg{
+   margin-right: 20px;
+  }
+  .dayOfWeek{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    background: #cacacde9;
+    border: 2px solid black;
+   
+  }
+  select{
+    height: 60px;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  input {
+ width: calc(100% - 43px);
+  color: rgb(42, 41, 41);
+  font-size: 20px;
+  background: #cacacdd9;
+  padding: 20px;
+  border: 2px solid black;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+textarea{
+  width: calc(100% - 43px);
+  color: rgb(42, 41, 41);
+  font-size: 20px;
+  background: #cacacdd9;
+  padding: 20px;
+  border: 2px solid black;
+  font-family: 'Gloria Hallelujah', cursive;
+
+}
+.title{
+  font-weight: 500;
+}
+.day{
+  border-bottom: 2px solid rgb(110, 109, 109);
+}
+  .ingredients{
+    height: 90px;
+  }
+  
+  button {
+  padding: 20px 50px 20px 70px;
+  background-color: #616dc6d2;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  }
+  .form{
+    width: 500px;
+    margin: auto;
+  }
+  .contWithEachEl{
+      background: rgba(89, 126, 126, 0.737);
+      margin-top: 20px;
+      margin: 20px;
+      width: 30%;
+  }
+  .contWithAllEl{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+   flex-wrap: wrap;
+    background-color: rgba(193, 158, 197, 0.536);
+  }
+  p {
+  max-width: 100%;
+  font-size: 20px;
+  }
+
+
+  .inputsContainer{
+    margin-bottom: 3px;
+  }
+
+  @media all and (max-width:800px){
+    .contWithEachEl{
+      width: 50%;
+  }
+  .form{
+    width: 350px;
+  }
+  .dayOfWeek{
+    width: 337px;
+  }
+  }
