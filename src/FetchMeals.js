@@ -2,7 +2,7 @@ import axios from "axios";
 
 //get all meal from API and display it 
 const getAllMeal = (setMeal)=> {
-    axios.get("https://meal-plan-utc0.onrender.com")
+    axios.get("https://meal-plan-app.onrender.com")
     .then(({data})=> {
           console.log(data)
      setMeal(data)
@@ -12,7 +12,7 @@ const getAllMeal = (setMeal)=> {
 
 //say to add new Meal and display what was before
 const addMeal = (title, ingredients, setIngredients, setTitle, setMeal, dayOfWeek, setDayOfWeek)=>{
-    axios.post(`https://meal-plan-utc0.onrender.com/saveMeals`, {title, ingredients, dayOfWeek})
+    axios.post(`https://meal-plan-app.onrender.com/saveMeals`, {title, ingredients, dayOfWeek})
     .then(()=>{
  //after push ADD empty inputs and update all list 
         setTitle("")
@@ -23,7 +23,7 @@ const addMeal = (title, ingredients, setIngredients, setTitle, setMeal, dayOfWee
     }
 
 const editMeal = (mealId, title, ingredients, setIngredients, setMeal, setTitle, setEditing1, dayOfWeek, setDayOfWeek)=>{
-    axios.post(`https://meal-plan-utc0.onrender.com/editMeal`, {_id: mealId, title, ingredients, dayOfWeek})
+    axios.post(`https://meal-plan-app.onrender.com/editMeal`, {_id: mealId, title, ingredients, dayOfWeek})
         .then(()=>{
             setTitle("")
             setIngredients("")
@@ -35,7 +35,7 @@ const editMeal = (mealId, title, ingredients, setIngredients, setMeal, setTitle,
 
 
 const deleteMeal = (_id, setMeal)=>{
-    axios.post(`https://meal-plan-utc0.onrender.com/deleteMeal`, {_id})
+    axios.post(`https://meal-plan-app.onrender.com/deleteMeal`, {_id})
         .then(()=>{
             getAllMeal(setMeal)
         })
