@@ -11,23 +11,25 @@ const getAllMeal = (setMeal)=> {
 
 
 //say to add new Meal and display what was before
-const addMeal = (title, ingredients, setIngredients, setTitle, setMeal, dayOfWeek, setDayOfWeek)=>{
-    axios.post(`https://meal-plan-app.onrender.com/saveMeals`, {title, ingredients, dayOfWeek})
+const addMeal = (title, ingredients, setIngredients, setTitle, setMeal, dayOfWeek, setDayOfWeek, typeOfMeal, setTypeOfMeal)=>{
+    axios.post(`https://meal-plan-app.onrender.com/saveMeals`, {title, ingredients, dayOfWeek, typeOfMeal})
     .then(()=>{
  //after push ADD empty inputs and update all list 
         setTitle("")
         setIngredients("")
         setDayOfWeek("")
+        setTypeOfMeal("")
         getAllMeal(setMeal)
     })
     }
 
-const editMeal = (mealId, title, ingredients, setIngredients, setMeal, setTitle, setEditing1, dayOfWeek, setDayOfWeek)=>{
-    axios.post(`https://meal-plan-app.onrender.com/editMeal`, {_id: mealId, title, ingredients, dayOfWeek})
+const editMeal = (mealId, title, ingredients, setIngredients, setMeal, setTitle, setEditing1, dayOfWeek,typeOfMeal, setDayOfWeek, setTypeOfMeal)=>{
+    axios.post(`https://meal-plan-app.onrender.com/editMeal`, {_id: mealId, title, ingredients, dayOfWeek, typeOfMeal})
         .then(()=>{
             setTitle("")
             setIngredients("")
             setDayOfWeek("")
+            setTypeOfMeal("")
             setEditing1(false)
             getAllMeal(setMeal)
         })

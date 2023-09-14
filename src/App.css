@@ -1,51 +1,66 @@
 body {
-  background: url('https://images.unsplash.com/photo-1543353071-873f17a7a088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+  background: url('https://images.unsplash.com/photo-1576866209830-589e1bfbaa4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80');
   background-size: cover;
+  -webkit-background-size: contain;
+  background-size: cover;
+  background-position-x: center;
   min-height: 100vh;
-  display: grid;
+  min-width: 100vw;
   place-items: center;
   font-family: 'Gloria Hallelujah', cursive;
-
   }
   .App{
     text-align: center;
   }
   h1 {
-background-color: rgba(89, 126, 126, 0.737);;
+font-size: 70px;
+color: white;
+  }
+  h3{
+    color: white;
+  }
+  label{
+     color: white;
   }
   .deleteImg{
    margin-right: 20px;
   }
+ 
   .dayOfWeek{
     display: flex;
-    padding: 5px;
     justify-content: center;
     align-items: center;
-    background: #cacacde9;
-    border: 2px solid black;
-   
+  }
+  
+  .typeOfMealCont{
+    display: flex;
+   justify-content: space-around;
+  }
+  .cont-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   select{
     height: 60px;
     font-size: 20px;
-    padding: 5px;
     font-family: 'Gloria Hallelujah', cursive;
   }
   input {
- width: calc(100% - 43px);
+  width: calc(100% - 43px);
   color: rgb(42, 41, 41);
-  font-size: 20px;
-  background: #cacacdd9;
-  padding: 20px;
+  font-size: 16px;
+  padding: 10px;
   border: 2px solid black;
   font-family: 'Gloria Hallelujah', cursive;
 }
+
 textarea{
   width: calc(100% - 43px);
   color: rgb(42, 41, 41);
-  font-size: 20px;
-  background: #cacacdd9;
-  padding: 20px;
+  font-size: 16px;
+  padding: 10px;
   border: 2px solid black;
   font-family: 'Gloria Hallelujah', cursive;
 
@@ -70,21 +85,28 @@ textarea{
   .form{
     width: 500px;
     margin: auto;
+    background-color: rgba(35, 74, 74, 0.531);
+    border-radius: 20px;
   }
   .contWithEachEl{
-      background: rgba(89, 126, 126, 0.737);
       margin-top: 20px;
       margin: 20px;
       width: 30%;
   }
   .contWithAllEl{
     margin-top: 10px;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100vw;
    flex-wrap: wrap;
-    background-color: rgba(193, 158, 197, 0.536);
+  }
+  .contWIthMeal{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 5px 5px 6px rgb(77, 76, 76);
+    -webkit-box-shadow: 0px 5px 21px 16px rgba(35, 44, 45, 0.2);
+    -moz-box-shadow: 0px 5px 21px 16px rgba(98, 202, 202, 0.2);
   }
   p {
   max-width: 100%;
@@ -92,11 +114,21 @@ textarea{
   }
 
 
-  .inputsContainer{
-    margin-bottom: 3px;
-  }
+ 
 
   @media all and (max-width:800px){
+    body {
+   
+      overflow-x: hidden;
+     }
+      .App{
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    h1 {
+      font-size: 40px;
+        }
     .contWithEachEl{
       width: 50%;
   }
