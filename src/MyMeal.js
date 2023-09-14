@@ -9,7 +9,7 @@ export const MyMeal = ({text, ingredients, deleteMeal, updatingInInput, dayOfWee
         <div className="contWithEachEl">
         <p className="day">{dayOfWeek}</p>
         <div className="contWIthMeal">
-        <img src={`./${typeOfMeal}.png`} width="140px"/>
+        <img src={`./${typeOfMeal}.png`} width="140px" alt="alt"/>
         <p className="title">{text}</p>
         <p>{ingredients}</p>
         <img className="deleteImg" onClick={deleteMeal} width="30" height="30" src="https://img.icons8.com/fluency-systems-regular/48/delete-trash--v2.png" alt="delete-trash--v2"/>
