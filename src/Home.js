@@ -43,11 +43,11 @@ function Home() {
     setTypeOfMeal(checkedTypeWord);
   };
 
+  
+if(loading) return <p>Loading...</p>
   return (
     <div>
-      {loading &&
-        <p>Loading...</p>
-    }
+     
       <div className="form">
 
           <div className="dayOfWeek">
