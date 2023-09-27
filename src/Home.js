@@ -14,10 +14,12 @@ function Home() {
   const [typeOfMeal, setTypeOfMeal] = useState("");
   const [editing1, setEditing1] = useState(false);
   const [mealId, setMealId] = useState("");
+  const [loading, setLoading] = useState(true);
 
   //send state in component with API(and update it there)
   useEffect(() => {
     getAllMeal(setMeal);
+    setLoading(false);
   }, []);
 
   const updatingInInput = (_id, title, ingredients, dayOfWeek, typeOfMeal) => {
@@ -43,6 +45,9 @@ function Home() {
 
   return (
     <div>
+      {loading &&
+        <p>Loading...</p>
+    }
       <div className="form">
 
           <div className="dayOfWeek">
@@ -165,10 +170,7 @@ function Home() {
           {editing1 ? "EDIT" : "ADD"}
         </button>
       </div>
-      {/*
-      with method map() take from array with objects each el
-      und display it through component MyMeal
-      and send props with a necessary info*/}
+     
       <div className="contWithAllEl">
         {myMeal.map((meal) => (
           <MyMeal
