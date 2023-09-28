@@ -44,7 +44,7 @@ function Home() {
   };
 
   
-if(loading) return  <div><p>Loading...</p> </div>
+
   return (
     <div>
       <div className="form">
@@ -170,7 +170,7 @@ if(loading) return  <div><p>Loading...</p> </div>
       </div>
      
       <div className="contWithAllEl">
-        {myMeal.map((meal) => (
+        {myMeal.map((meal) => ( loading ? <p>Loading...</p> :
           <MyMeal
             text={meal.title}
             ingredients={meal.ingredients}
