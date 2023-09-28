@@ -47,9 +47,7 @@ function Home() {
 if(loading) return  <div><p>Loading...</p> </div>
   return (
     <div>
-     
       <div className="form">
-
           <div className="dayOfWeek">
             <h3> Choose day of week</h3>
             <select onChange={checkedDay}>
